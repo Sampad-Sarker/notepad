@@ -55,7 +55,13 @@ export default {
     handleSubmit(){
       this.note.id = uuidv4()
       this.note.time = new Date()
-      this.$store.commit("addNote",this.note)
+
+      if(this.note.title===''||this.note.desc===''){
+        alert("PLZ Add Note's Title/Description")
+      }else{
+        this.$store.commit("addNote",this.note)
+      }
+      
 
       this.note ={
         id:null,
