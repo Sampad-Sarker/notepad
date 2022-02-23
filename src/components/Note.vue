@@ -28,8 +28,14 @@ export default {
   
   computed: {
     rotateAngle() {
+      let randomAngle = Math.random()
+      if(randomAngle<0.5){ //50% chance
+        return (Math.random() *(8 - 0)+(0)); //0 to 8
+      }else if(randomAngle>0.5){
+        return (Math.random() *(-1 - (-8))+(-8)); //-1 to -8
+      }
        
-      return (Math.random() *(-8 - 5)+(2));
+      
     },
     time() {
       // return dayjs(this.note.time).format('D MMM YYYY,hh:mm:ss')
