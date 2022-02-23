@@ -194,6 +194,7 @@ body {
     column-gap: 15px;
     row-gap: 15px;
     .note {
+        // transform: rotate(5deg);
         border-radius: 5px;
         background-color: #fff;
         padding: 15px;
@@ -203,6 +204,38 @@ body {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+
+        .icon {
+            
+            opacity: 1;
+
+            
+
+            
+            top: 0;
+            left: 0;
+            border: none;
+            position: absolute;
+            
+            border: none;
+            button {
+                &:focus {
+                    outline: none;
+                }
+                cursor: pointer;
+                border: none;
+                background-color: transparent;
+            }
+            .pin {
+                color: red;
+                font-size: 20px;
+            }
+            
+        }
+
+
+
+
 
         &:hover {
             box-shadow: 0 5px 25px rgba(#000000, 0.3);

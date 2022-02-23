@@ -1,12 +1,19 @@
 <template>
-  <div class="note" :style="{ 'background-color': note.color }">
+  <div class="note" 
+      :style="{ 'background-color': note.color ,
+                transform:`rotate(${rotateAngle}deg)`
+      }"
+    
+    
+  >
     <div>
-      <h3 class="title">📌 {{ note.title }}</h3>
+      <div class="icon"><button class="pin">📌</button></div>
+      <h3 class="title">{{ note.title }}</h3>
       <p>{{ note.desc }}</p>
     </div>
     <p class="time">{{ time }}</p>
 
-    <!-- <div class="buttons"><button class="delete" @click="remove">🎈</button></div> -->
+   
     <div class="buttons"><button class="delete" @click="remove">X</button></div>
   </div>
 </template>
@@ -18,13 +25,19 @@ dayjs.extend(relativeTime);
 export default {
   name: "Note",
   props: ["note"],
+  
   computed: {
+    rotateAngle() {
+       
+      return (Math.random() *(-8 - 5)+(2));
+    },
     time() {
       // return dayjs(this.note.time).format('D MMM YYYY,hh:mm:ss')
       return dayjs(this.note.time).fromNow();
     },
   },
   methods: {
+    
     remove() {
       this.$store.commit("deleteNote", this.note.id);
     },
