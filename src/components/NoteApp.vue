@@ -54,7 +54,12 @@
         <p>Note not available</p>
     </div>
     <div >
-        <p class="app-footer">developed by <span><a href="https://github.com/Sampad-Sarker" >SampadSarker</a></span>  with <span class="animate-pulse">❤️</span></p>
+        <!-- <p class="app-footer">developed by <span><a href="https://github.com/Sampad-Sarker" >SampadSarker</a></span>  with <span class="animate-pulse">❤️</span></p> -->
+
+        <p class="app-footer">
+          developed with <span class="anime animate__animated animate__heartBeat animate__infinite">❤️</span> by <a href="https://github.com/Sampad-Sarker" target="_blank">SampadSarker</a>
+          
+        </p>
     </div>
   </div>
 </template>
